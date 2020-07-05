@@ -20,11 +20,15 @@ namespace {
     #define REV(cont)  reverse(ALL(cont))
     #define SORT(cont) sort(ALL(cont))
     #define RSORT(cont) sort(RALL(cont))
-    template<typename C>ll SIZE(const C& c) { return static_cast<ll>(c.size()); }   
+    template<typename C>ll SZ(const C& c) { return static_cast<ll>(c.size()); }   
     template<typename T, typename U, typename Comp = less<>>
     static inline bool chmax(T& maxv, const U& value, Comp comp = {}) { if (comp(maxv, value)) { maxv = value; return true; } return false; }
     template<typename T, typename U, typename Comp = less<>>
     static inline bool chmin(T& minv, const U& value, Comp comp = {}) { if (comp(value, minv)) { minv = value; return true; } return false; }
+    int ctoi(const char c) {
+        if ('0' <= c && c <= '9') return (c - '0');
+        return -1;
+    }
 }
 
 // 自動呼び出し
@@ -34,8 +38,17 @@ struct fast_io {
 } fast_io;
 
 void solve() {
-    int a; cin >> a;
-    cout << a + (a * a) + (a * a * a) << "\n";
+    int k;
+    cin >> k;
+    int a, b;
+    cin >> a >> b;
+    FOR(i, a, b + 1, 1) {
+        if (i % k == 0) {
+            cout << "OK" << "\n";
+            return;
+        }
+    }
+    cout << "NG" << "\n";
 }
 
 signed main()
