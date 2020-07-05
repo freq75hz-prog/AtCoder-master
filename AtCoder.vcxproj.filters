@@ -13,10 +13,19 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="ソース ファイル\ABC">
+      <UniqueIdentifier>{75c223b4-4821-453d-941f-c33c73ae2b62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\ABC\172">
+      <UniqueIdentifier>{bff50549-4138-4d2a-8907-f880afd81fff}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="A.cpp">
+      <Filter>ソース ファイル\ABC\172</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
